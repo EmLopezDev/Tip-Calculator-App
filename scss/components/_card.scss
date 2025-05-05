@@ -1,0 +1,102 @@
+@use "../utils/" as u;
+
+$spacing-0: 0;
+$spacing-100: 8;
+$spacing-200: 16;
+$spacing-300: 24;
+$spacing-400: 32;
+$spacing-600: 48;
+$spacing-1000: 80;
+$spacing-1200: 96;
+$spacing-1500: 120;
+$spacing-1600: 128;
+
+fieldset {
+    border: none;
+}
+
+label,
+legend {
+    @include u.text-preset-5;
+}
+
+input[type="number"] {
+    height: u.rem(48);
+    padding: u.rem($spacing-100) u.rem($spacing-200);
+    background-color: var(--color-grey-50);
+    border: none;
+    border-radius: u.rem(5);
+    color: var(--color-green-900);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.app__card {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: u.rem($spacing-400) u.rem($spacing-300);
+    border-radius: u.rem($spacing-200) u.rem($spacing-200) 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: u.rem($spacing-400);
+
+    &--form {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem($spacing-400);
+        padding: 0 u.rem($spacing-100);
+
+        & .app__card--bill {
+            display: flex;
+            flex-direction: column;
+
+            & > label {
+                color: var(--color-grey-500);
+                margin-bottom: u.rem($spacing-100);
+            }
+        }
+
+        & .app__card--tip {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: u.rem($spacing-200);
+
+            & .radio__container {
+                background-color: var(--color-green-900);
+                color: var(--color-white);
+                padding: u.rem($spacing-100) u.rem($spacing-200);
+                border: none;
+                border-radius: u.rem(5);
+                text-align: center;
+
+                & label {
+                    @include u.text-preset-3;
+                }
+
+                &:last-child {
+                    background-color: var(--color-grey-50);
+                    color: var(--color-grey-550);
+                }
+            }
+
+            & > legend {
+                display: block;
+                color: var(--color-grey-500);
+                margin-bottom: u.rem($spacing-100);
+            }
+        }
+
+        & .app__card--people {
+            display: flex;
+            flex-direction: column;
+
+            & > label {
+                color: var(--color-grey-500);
+                margin-bottom: u.rem($spacing-100);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "../utils/" as u;
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family), sans-serif;
+    background-color: var(--color-grey-200);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: u.rem(40);
+    margin-top: u.rem(50);
+}

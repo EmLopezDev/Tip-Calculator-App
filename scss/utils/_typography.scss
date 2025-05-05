@@ -1,0 +1,65 @@
+@use "functions" as f;
+
+:root {
+    --font-family: "Space Mono";
+}
+
+$font-size-xxlarge: 40;
+$font-size-xlarge: 32;
+$font-size-large: 24;
+$font-size-medium: 20;
+$font-size-small: 16;
+$font-size-xsmall: 13;
+$font-weight: 700;
+$line-height-xxlarge: 71px;
+$line-height-xlarge: 47px;
+$line-height-large: 36px;
+$line-height-medium: 30px;
+$line-height-small: 24px;
+$line-height-xsmall: 19px;
+$letter-spacing-none: 0;
+$letter-spacing-small: -1px;
+$letter-spacing-xsmall: -0.67px;
+
+@mixin text-preset-1 {
+    font-size: f.rem($font-size-xxlarge);
+    font-weight: $font-weight;
+    line-height: $line-height-xxlarge;
+    letter-spacing: $letter-spacing-small;
+}
+
+@mixin text-preset-2 {
+    font-size: f.rem($font-size-xlarge);
+    font-weight: $font-weight;
+    line-height: $line-height-xlarge;
+    letter-spacing: $letter-spacing-xsmall;
+    letter-spacing: $letter-spacing-none;
+}
+
+@mixin text-preset-3 {
+    font-size: f.rem($font-size-large);
+    font-weight: $font-weight;
+    line-height: $line-height-large;
+    letter-spacing: $letter-spacing-none;
+}
+
+@mixin text-preset-4 {
+    font-size: f.rem($font-size-medium);
+    font-weight: $font-weight;
+    line-height: $line-height-medium;
+    letter-spacing: $letter-spacing-none;
+}
+
+@mixin text-preset-5 {
+    font-size: f.rem($font-size-small);
+    font-weight: $font-weight;
+    line-height: $line-height-small;
+    letter-spacing: $letter-spacing-none;
+}
+
+@mixin text-preset-6 {
+    font-size: f.rem($font-size-xsmall);
+    font-weight: $font-weight;
+    line-height: $line-height-xsmall;
+    letter-spacing: $letter-spacing-none;
+}
