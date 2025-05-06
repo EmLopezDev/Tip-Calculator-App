@@ -99,4 +99,60 @@ input[type="radio"] {
             }
         }
     }
+
+    &--results {
+        padding: u.rem($spacing-400);
+        background-color: var(--color-green-900);
+        border-radius: u.rem(15);
+
+        & h3 {
+            color: var(--color-white);
+
+            @include u.text-preset-5;
+        }
+
+        &-person {
+            color: var(--color-grey-400);
+
+            @include u.text-preset-6;
+        }
+
+        &-number {
+            color: var(--color-green-400);
+            @include u.text-preset-2;
+        }
+
+        & div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        & > div:first-child {
+            margin-bottom: u.rem($spacing-300);
+        }
+
+        & > div + div {
+            margin-bottom: u.rem($spacing-400);
+        }
+
+        & button {
+            width: 100%;
+            height: u.rem(48);
+            padding: u.rem($spacing-100) u.rem($spacing-400);
+            background-color: var(--color-green-200);
+            color: var(--color-green-900);
+            border: none;
+            border-radius: u.rem(5);
+            cursor: pointer;
+
+            @include u.text-preset-4;
+
+            &:disabled {
+                cursor: not-allowed;
+                background-color: var(--color-green-750);
+                color: var(--color-green-800);
+            }
+        }
+    }
 }
