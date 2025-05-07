@@ -20,6 +20,17 @@ legend {
     @include u.text-preset-5;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 input[type="number"] {
     width: 100%;
     height: u.rem(48);
@@ -31,14 +42,25 @@ input[type="number"] {
     text-align: right;
 
     @include u.text-preset-3;
-}
 
-input[type="number"]::placeholder {
-    color: var(--color-grey-300);
+    &::placeholder {
+        color: var(--color-grey-300);
+    }
 }
 
 input[type="radio"] {
     display: none;
+}
+
+input[id="custom-tip"] {
+    height: 100%;
+
+    @include u.text-preset-3;
+
+    &::placeholder {
+        color: var(--color-grey-500);
+        text-align: center;
+    }
 }
 
 .app__card {
@@ -107,6 +129,16 @@ input[type="radio"] {
                 border: none;
                 border-radius: u.rem(5);
                 text-align: center;
+
+                &:hover {
+                    background-color: var(--color-green-200);
+                    color: var(--color-green-900);
+                }
+
+                &.active {
+                    background-color: var(--color-green-200);
+                    color: var(--color-green-900);
+                }
 
                 & label {
                     @include u.text-preset-3;

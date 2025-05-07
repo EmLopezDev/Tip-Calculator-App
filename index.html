@@ -42,7 +42,13 @@
                 <fieldset class="app__card--tip">
                     <legend>Select Tip %</legend>
                     <div class="radio__container">
-                        <input id="5%" type="radio" name="tip" value="0.05" />
+                        <input
+                            id="5%"
+                            type="radio"
+                            name="tip"
+                            value="0.05"
+                            required
+                        />
                         <label for="5%">5%</label>
                     </div>
                     <div class="radio__container">
@@ -61,10 +67,12 @@
                         <input id="50%" type="radio" name="tip" value="0.50" />
                         <label for="50%">50%</label>
                     </div>
-                    <div class="radio__container">
-                        <input id="custom" type="radio" name="tip" value="0" />
-                        <label for="custom">Custom</label>
-                    </div>
+                    <input
+                        id="custom-tip"
+                        type="number"
+                        placeholder="Custom"
+                        min="0"
+                    />
                 </fieldset>
                 <fieldset class="app__card--people">
                     <label for="number-of-people">Number of People</label>
@@ -100,7 +108,7 @@
                     type="button"
                     disabled
                 >
-                    Reset
+                    RESET
                 </button>
             </section>
         </main>
