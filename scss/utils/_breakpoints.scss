@@ -1,7 +1,7 @@
 @use "functions" as f;
 
 $breakpoints: (
-    "small": f.em(640),
+    "small": f.em(600),
     "medium": f.em(1024),
 );
 

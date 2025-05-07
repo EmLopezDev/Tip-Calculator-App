@@ -26,6 +26,7 @@ $letter-spacing-xsmall: -0.67px;
     font-weight: $font-weight;
     line-height: $line-height-xxlarge;
     letter-spacing: $letter-spacing-small;
+    font-family: var(--font-family);
 }
 
 @mixin text-preset-2 {
@@ -33,6 +34,7 @@ $letter-spacing-xsmall: -0.67px;
     font-weight: $font-weight;
     line-height: $line-height-xlarge;
     letter-spacing: $letter-spacing-xsmall;
+    font-family: var(--font-family);
 }
 
 @mixin text-preset-3 {
@@ -40,6 +42,7 @@ $letter-spacing-xsmall: -0.67px;
     font-weight: $font-weight;
     line-height: $line-height-large;
     letter-spacing: $letter-spacing-none;
+    font-family: var(--font-family);
 }
 
 @mixin text-preset-4 {
@@ -47,6 +50,7 @@ $letter-spacing-xsmall: -0.67px;
     font-weight: $font-weight;
     line-height: $line-height-medium;
     letter-spacing: $letter-spacing-none;
+    font-family: var(--font-family);
 }
 
 @mixin text-preset-5 {
@@ -54,6 +58,7 @@ $letter-spacing-xsmall: -0.67px;
     font-weight: $font-weight;
     line-height: $line-height-small;
     letter-spacing: $letter-spacing-none;
+    font-family: var(--font-family);
 }
 
 @mixin text-preset-6 {
@@ -61,4 +66,5 @@ $letter-spacing-xsmall: -0.67px;
     font-weight: $font-weight;
     line-height: $line-height-xsmall;
     letter-spacing: $letter-spacing-none;
+    font-family: var(--font-family);
 }

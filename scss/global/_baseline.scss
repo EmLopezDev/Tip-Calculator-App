@@ -18,6 +18,17 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: u.rem(40);
+
+    @include u.breakpoint(small) {
+        padding: 0 u.rem(32) u.rem(32);
+        justify-content: flex-start;
+    }
+
+    @include u.breakpoint(medium) {
+        padding: 0;
+        justify-content: center;
+        gap: u.rem(64);
+    }
 }
 
 header {
@@ -26,4 +37,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include u.breakpoint(medium) {
+        margin-top: 0;
+    }
 }

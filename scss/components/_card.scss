@@ -1,10 +1,10 @@
 @use "../utils/" as u;
 
-$spacing-0: 0;
 $spacing-100: 8;
 $spacing-200: 16;
 $spacing-300: 24;
 $spacing-400: 32;
+$spacing-500: 40;
 $spacing-600: 48;
 $spacing-1000: 80;
 $spacing-1200: 96;
@@ -27,6 +27,8 @@ input[type="number"] {
     border: none;
     border-radius: u.rem(5);
     color: var(--color-green-900);
+
+    @include u.text-preset-3;
 }
 
 input[type="radio"] {
@@ -43,11 +45,35 @@ input[type="radio"] {
     flex-direction: column;
     gap: u.rem($spacing-400);
 
+    @include u.breakpoint(small) {
+        max-width: u.rem(608);
+        border-radius: u.rem($spacing-200);
+        padding: u.rem($spacing-600) u.rem($spacing-1000);
+        gap: u.rem($spacing-500);
+    }
+
+    @include u.breakpoint(medium) {
+        flex-direction: row;
+        max-width: u.rem(920);
+        padding: u.rem($spacing-400);
+        gap: u.rem($spacing-600);
+    }
+
     &--form {
         display: flex;
         flex-direction: column;
         gap: u.rem($spacing-400);
         padding: 0 u.rem($spacing-100);
+
+        @include u.breakpoint(small) {
+            padding: 0;
+            gap: u.rem($spacing-300);
+        }
+
+        @include u.breakpoint(medium) {
+            flex-grow: 1;
+            justify-content: center;
+        }
 
         & .app__card--bill {
             display: flex;
@@ -63,6 +89,10 @@ input[type="radio"] {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: u.rem($spacing-200);
+
+            @include u.breakpoint(small) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
 
             & .radio__container {
                 background-color: var(--color-green-900);
@@ -101,9 +131,18 @@ input[type="radio"] {
     }
 
     &--results {
-        padding: u.rem($spacing-400);
+        padding: u.rem($spacing-300);
         background-color: var(--color-green-900);
         border-radius: u.rem(15);
+        width: 100%;
+
+        @include u.breakpoint(small) {
+            padding: u.rem($spacing-500);
+        }
+
+        @include u.breakpoint(medium) {
+            max-width: u.rem(400);
+        }
 
         & h3 {
             color: var(--color-white);
@@ -130,10 +169,18 @@ input[type="radio"] {
 
         & > div:first-child {
             margin-bottom: u.rem($spacing-300);
+
+            @include u.breakpoint(medium) {
+                margin-bottom: u.rem($spacing-500);
+            }
         }
 
         & > div + div {
             margin-bottom: u.rem($spacing-400);
+
+            @include u.breakpoint(medium) {
+                margin-bottom: u.rem($spacing-1600);
+            }
         }
 
         & button {
