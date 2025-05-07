@@ -28,13 +28,16 @@
             <form class="app__card--form" action="">
                 <fieldset class="app__card--bill">
                     <label for="bill">Bill</label>
-                    <input
-                        id="bill"
-                        type="number"
-                        min="0"
-                        placeholder="0"
-                        required
-                    />
+                    <div class="app__card--input-container">
+                        <input
+                            id="bill"
+                            type="number"
+                            min="0"
+                            placeholder="0"
+                            required
+                        />
+                        <img src="./images/icon-dollar.svg" alt="" />
+                    </div>
                 </fieldset>
                 <fieldset class="app__card--tip">
                     <legend>Select Tip %</legend>
@@ -65,13 +68,16 @@
                 </fieldset>
                 <fieldset class="app__card--people">
                     <label for="number-of-people">Number of People</label>
-                    <input
-                        id="number-of-people"
-                        type="number"
-                        min="0"
-                        placeholder="0"
-                        required
-                    />
+                    <div class="app__card--input-container">
+                        <input
+                            id="number-of-people"
+                            type="number"
+                            min="0"
+                            placeholder="0"
+                            required
+                        />
+                        <img src="./images/icon-person.svg" alt="" />
+                    </div>
                 </fieldset>
             </form>
             <section class="app__card--results">

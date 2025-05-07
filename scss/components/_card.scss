@@ -21,14 +21,20 @@ legend {
 }
 
 input[type="number"] {
+    width: 100%;
     height: u.rem(48);
     padding: u.rem($spacing-100) u.rem($spacing-200);
     background-color: var(--color-grey-50);
     border: none;
     border-radius: u.rem(5);
     color: var(--color-green-900);
+    text-align: right;
 
     @include u.text-preset-3;
+}
+
+input[type="number"]::placeholder {
+    color: var(--color-grey-300);
 }
 
 input[type="radio"] {
@@ -127,6 +133,16 @@ input[type="radio"] {
                 color: var(--color-grey-500);
                 margin-bottom: u.rem($spacing-100);
             }
+        }
+    }
+
+    &--input-container {
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: u.rem(16);
+            left: u.rem(16);
         }
     }
 
