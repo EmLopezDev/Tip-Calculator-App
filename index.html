@@ -17,6 +17,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="./dist/styles.css" />
+        <script defer src="./js/main.js"></script>
         <title>Tip calculator app</title>
     </head>
     <body>
@@ -41,32 +42,41 @@
                 </fieldset>
                 <fieldset class="app__card--tip">
                     <legend>Select Tip %</legend>
-                    <div class="radio__container">
-                        <input
-                            id="5%"
-                            type="radio"
-                            name="tip"
-                            value="0.05"
-                            required
-                        />
-                        <label for="5%">5%</label>
-                    </div>
-                    <div class="radio__container">
-                        <input id="10%" type="radio" name="tip" value="0.10" />
-                        <label for="10%">10%</label>
-                    </div>
-                    <div class="radio__container">
-                        <input id="15%" type="radio" name="tip" value="0.15" />
-                        <label for="15%">15%</label>
-                    </div>
-                    <div class="radio__container">
-                        <input id="25%" type="radio" name="tip" value="0.25" />
-                        <label for="25%">25%</label>
-                    </div>
-                    <div class="radio__container">
-                        <input id="50%" type="radio" name="tip" value="0.50" />
-                        <label for="50%">50%</label>
-                    </div>
+                    <button
+                        class="app__card--tip-button"
+                        type="button"
+                        value="0.5"
+                    >
+                        5%
+                    </button>
+                    <button
+                        class="app__card--tip-button"
+                        type="button"
+                        value="0.10"
+                    >
+                        10%
+                    </button>
+                    <button
+                        class="app__card--tip-button"
+                        type="button"
+                        value="0.15"
+                    >
+                        15%
+                    </button>
+                    <button
+                        class="app__card--tip-button"
+                        type="button"
+                        value="0.25"
+                    >
+                        25%
+                    </button>
+                    <button
+                        class="app__card--tip-button"
+                        type="button"
+                        value="0.50"
+                    >
+                        50%
+                    </button>
                     <input
                         id="custom-tip"
                         type="number"
@@ -104,6 +114,7 @@
                     <span class="app__card--results-number">$0.00</span>
                 </div>
                 <button
+                    id="reset-button"
                     class="app__card--results-button"
                     type="button"
                     disabled
