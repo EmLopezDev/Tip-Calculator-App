@@ -19,6 +19,7 @@ const removeActiveTip = () => {
 const addAcitveTip = (evt) => {
     tipButtons.forEach((button) => {
         if (button.id === evt.target.id) {
+            tipCustom.value = "";
             button.classList.add("active");
         }
     });
@@ -76,11 +77,8 @@ const showResults = () => {
 };
 
 billInput.addEventListener("input", (e) => {
-    if (e.target.value === "0") {
-    } else {
-        bill = Number(e.target.value);
-        showResults();
-    }
+    bill = Number(e.target.value);
+    showResults();
 });
 
 const addTip = (evt, value) => {
