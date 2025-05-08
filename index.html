@@ -28,7 +28,13 @@
         <main class="app__card">
             <form class="app__card--form" action="">
                 <fieldset class="app__card--bill">
-                    <label for="bill">Bill</label>
+                    <div>
+                        <label for="bill">Bill</label>
+                        <span
+                            id="bill-error"
+                            class="app__card--bill-error"
+                        ></span>
+                    </div>
                     <div class="app__card--input-container">
                         <input
                             id="bill"
@@ -41,8 +47,13 @@
                     </div>
                 </fieldset>
                 <fieldset class="app__card--tip">
-                    <legend>Select Tip %</legend>
+                    <legend>
+                        Select Tip %
+                        <span id="tip-error" class="app__card--tip-error">
+                        </span>
+                    </legend>
                     <button
+                        id="5"
                         class="app__card--tip-button"
                         type="button"
                         value="0.05"
@@ -50,6 +61,7 @@
                         5%
                     </button>
                     <button
+                        id="10"
                         class="app__card--tip-button"
                         type="button"
                         value="0.10"
@@ -57,6 +69,7 @@
                         10%
                     </button>
                     <button
+                        id="15"
                         class="app__card--tip-button"
                         type="button"
                         value="0.15"
@@ -64,6 +77,7 @@
                         15%
                     </button>
                     <button
+                        id="25"
                         class="app__card--tip-button"
                         type="button"
                         value="0.25"
@@ -71,6 +85,7 @@
                         25%
                     </button>
                     <button
+                        id="50"
                         class="app__card--tip-button"
                         type="button"
                         value="0.50"
@@ -85,13 +100,18 @@
                     />
                 </fieldset>
                 <fieldset class="app__card--people">
-                    <label for="number-of-people">Number of People</label>
+                    <div>
+                        <label for="number-of-people">Number of People</label>
+                        <span
+                            id="people-error"
+                            class="app__card--people-error"
+                        ></span>
+                    </div>
                     <div class="app__card--input-container">
                         <input
                             id="number-of-people"
                             type="number"
                             min="0"
-                            step="1"
                             placeholder="0"
                             required
                         />
@@ -105,14 +125,20 @@
                         Tip Amount <br />
                         <span class="app__card--results-person">/ person</span>
                     </h3>
-                    <span class="app__card--results-number">$0.00</span>
+                    <span id="tip-per-person" class="app__card--results-number"
+                        >$0.00</span
+                    >
                 </div>
                 <div class="app__card--results-total">
                     <h3 class="app__card--results-header">
                         Total <br />
                         <span class="app__card--results-person">/ person</span>
                     </h3>
-                    <span class="app__card--results-number">$0.00</span>
+                    <span
+                        id="total-per-person"
+                        class="app__card--results-number"
+                        >$0.00</span
+                    >
                 </div>
                 <button
                     id="reset-button"

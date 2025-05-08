@@ -107,9 +107,19 @@ input[id="custom-tip"] {
             display: flex;
             flex-direction: column;
 
-            & > label {
+            & label {
                 color: var(--color-grey-500);
+            }
+
+            & > div {
+                display: flex;
+                justify-content: space-between;
                 margin-bottom: u.rem($spacing-100);
+            }
+
+            &-error {
+                color: var(--color-orange-400);
+                @include u.text-preset-5;
             }
         }
 
@@ -145,8 +155,17 @@ input[id="custom-tip"] {
 
             & > legend {
                 display: block;
+                width: 100%;
+                position: relative;
                 color: var(--color-grey-500);
                 margin-bottom: u.rem($spacing-100);
+            }
+
+            &-error {
+                position: absolute;
+                right: 0;
+                color: var(--color-orange-400);
+                @include u.text-preset-5;
             }
         }
 
@@ -154,9 +173,18 @@ input[id="custom-tip"] {
             display: flex;
             flex-direction: column;
 
-            & > label {
+            & label {
                 color: var(--color-grey-500);
+            }
+            & > div {
+                display: flex;
+                justify-content: space-between;
                 margin-bottom: u.rem($spacing-100);
+            }
+
+            &-error {
+                color: var(--color-orange-400);
+                @include u.text-preset-5;
             }
         }
     }
