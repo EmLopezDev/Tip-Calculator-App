@@ -58,7 +58,7 @@ const showResults = () => {
     if (!bill || tip === null || !people) {
         billErrorSpan.innerHTML = !bill ? "Can't be zero" : "";
         peopleErrorSpan.innerHTML = !people ? "Can't be zero" : "";
-        tipErrorSpan.innerHTML = tip === null ? "Must enter a tip amount" : "";
+        tipErrorSpan.innerHTML = tip === null ? "Must select tip" : "";
 
         tipPerPersonSpan.innerHTML = "$0.00";
         totalPerPersonSpan.innerHTML = "$0.00";
